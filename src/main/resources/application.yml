@@ -3,5 +3,18 @@ server:
 spring:
   application:
     name: ms-car
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${datasource_url}
+    username: ${datasource_username}
+    password: ${datasource_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+message:
+  service:
+    success:
+      insert: Success Insert
 
     
