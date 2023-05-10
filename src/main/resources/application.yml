@@ -13,6 +13,10 @@ spring:
     password: ${datasource_password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 message:
+  error_handler:
+    code_400: The request is incorrect, please verify your information
+    code_500: There was a server error and the request couldnt be completed
+    unique_key_code_400: Duplicate data
   service:
     success:
       insert: Success Insert

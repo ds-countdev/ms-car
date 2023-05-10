@@ -15,7 +15,6 @@ public class CarPostServiceMapper {
 			String [] format_date = car_post_request.getData().getCar_form().getCreated().split("/");
 		
 		return CarEntity.builder()
-				
 				.car_model(car_post_request.getData().getCar_form().getModel())
 				.car_color(car_post_request.getData().getCar_form().getColor().toUpperCase())
 				.car_type(car_type)
