@@ -28,9 +28,6 @@ public class CarEntity {
 	@Column(nullable = false, name ="model",length = 100,unique = false )
 	private String car_model;
 	
-	@Column(nullable = false, name="color", length = 20, unique = false)
-	private String car_color;
-	
 	@Column(nullable = false, name="velocity", length = 6, unique = false)
 	private Double car_velocity;
 	
@@ -38,11 +35,17 @@ public class CarEntity {
 	@JoinColumn(name = "car_type_id")
 	private CarTypeEntity car_type;
 	
+	@OneToOne
+	@JoinColumn(name = "car_color_id")
+	private CarColorEntity car_color;
+	
 	@Column(nullable = false, name ="created_car", length = 11, columnDefinition = "DATE")
 	private LocalDate created_date;
 	
 	@Column(nullable = false, name="registry_car", length = 11)
 	private LocalDate registry_date;
+	
+	private Boolean active;
 	
 	
 

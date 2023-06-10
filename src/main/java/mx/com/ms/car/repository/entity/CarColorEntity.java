@@ -16,18 +16,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "car_type")
-public class CarTypeEntity {
+@Table(name = "car_color")
+public class CarColorEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long car_type_id;
+	private Long car_color_id;
 	
-	@Column(length = 20, nullable = true)
-	private String name;
+	@Column(length = 30, nullable = true)
+	private String name; 
 	
-	@Column(length = 250, nullable = true)
+	@Column(length = 100, nullable = true)
 	private String description;
-	
 
 }

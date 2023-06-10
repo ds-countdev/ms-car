@@ -37,7 +37,6 @@ public class CarForm {
 	@Valid
 	@NotNull
 	@Pattern(regexp = "^((?:3[01]|[12][0-9]|0?[1-9])[\\/-]){2}\\d{4}$")
-	private String created;
-	
+	private String created;	
 
 }

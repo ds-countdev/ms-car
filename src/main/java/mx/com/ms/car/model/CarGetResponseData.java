@@ -11,12 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CarPostResponse {
+public class CarGetResponseData {
 	
-	@JsonProperty("status")
-	private Status status;
+	@JsonProperty("car")
+	private Car car;
 
-	@JsonProperty("data")
-	private CarPostResponseData data;
-	
 }

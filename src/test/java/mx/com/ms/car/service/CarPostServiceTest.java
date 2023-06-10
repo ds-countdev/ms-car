@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import java.util.concurrent.ExecutionException;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -32,7 +34,7 @@ class CarPostServiceTest {
 	private CarPostOperationResponse response;
 	
 	@Test
-	void test_for_car_service_when_insert_car() {
+	void test_for_car_service_when_insert_car() throws InterruptedException, ExecutionException {
 		Long car_id = 4L;
 		CarEntity car_entity = BuilderFactory.create_car_entity();
 		CarPostRequest car_request = BuilderFactory.create_car_post_request();

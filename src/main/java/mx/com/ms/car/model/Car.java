@@ -1,7 +1,5 @@
 package mx.com.ms.car.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,12 +9,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CarPostResponse {
-	
-	@JsonProperty("status")
-	private Status status;
+public class Car {
 
-	@JsonProperty("data")
-	private CarPostResponseData data;
-	
+	private String model;
+	private String color;
+	private String max_velocity;
+	private String type;
+	private String created;
 }
